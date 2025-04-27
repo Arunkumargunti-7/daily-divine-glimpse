@@ -41,7 +41,7 @@ const PsalmSection = ({ psalms, language }: PsalmSectionProps) => {
 
         {/* Display Psalm number and verse range at the bottom */}
         <div className="text-right text-sm font-medium text-muted-foreground mt-4">
-          {psalms.reference} — Verses {startingVerse}–{startingVerse + psalms.verses.length - 1}
+          {psalms.reference} : {startingVerse}–{startingVerse + psalms.verses.length - 1}
         </div>
       </CardContent>
     </Card>
