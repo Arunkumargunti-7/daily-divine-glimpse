@@ -30,7 +30,7 @@ const PsalmSection = ({ psalms, language }: PsalmSectionProps) => {
           ))}
         </div>
         <div className="text-right text-sm font-medium text-muted-foreground mt-4">
-          {psalms.reference}
+          {psalms.reference} — Verses {psalms.startVerse}–{psalms.endVerse}
         </div>
       </CardContent>
     </Card>
