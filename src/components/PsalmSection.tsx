@@ -40,8 +40,15 @@ const PsalmSection = ({ psalms, language }: PsalmSectionProps) => {
   </div>
 ))}
         </div>
-        <div className="text-right text-sm font-medium text-muted-foreground mt-4">
-          {psalms.reference}: {psalms.startVerse}–{psalms.startVerse + psalms.verses.length - 1}
+       {typeof psalms.startVerse === 'number' ? (
+  <div className="text-right text-sm font-medium text-muted-foreground mt-4">
+    {psalms.reference} : {psalms.startVerse}–{psalms.startVerse + psalms.verses.length - 1}
+  </div>
+) : (
+  <div className="text-right text-sm font-medium text-muted-foreground mt-4">
+    {psalms.reference}
+  </div>
+)}
         </div>
       </CardContent>
     </Card>
