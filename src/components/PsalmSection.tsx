@@ -7,7 +7,7 @@ interface PsalmSectionProps {
     verses: string[];
     reference: string;
    startVerse: number;
-    endVerse: number;
+  
   };
   language: 'en' | 'es';
 }
@@ -26,13 +26,22 @@ const PsalmSection = ({ psalms, language }: PsalmSectionProps) => {
       <CardContent className="space-y-4">
         <div className="space-y-3">
           {psalms.verses.map((verse, index) => (
-            <div key={index} className="verse-card verse-animation" style={{ animationDelay: `${index * 100}ms` }}>
-              <p className="text-foreground">{verse}</p>
-            </div>
-          ))}
+  <div
+    key={index}
+    className="verse-card verse-animation"
+    style={{ animationDelay: `${index * 100}ms` }}
+  >
+    <p className="text-foreground">
+      <span className="font-semibold text-spiritual-dark mr-2">
+        {psalms.startVerse + index}.
+      </span>
+      {verse}
+    </p>
+  </div>
+))}
         </div>
         <div className="text-right text-sm font-medium text-muted-foreground mt-4">
-          {psalms.reference} — {psalms.startVerse}–{psalms.endVerse}
+          {psalms.reference}: {psalms.startVerse}–{psalms.startVerse + psalms.verses.length - 1}
         </div>
       </CardContent>
     </Card>
