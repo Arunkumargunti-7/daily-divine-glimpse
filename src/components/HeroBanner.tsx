@@ -31,8 +31,8 @@ const HeroBanner = ({ language }: HeroBannerProps) => {
       
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
-        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-[95%] mx-auto">
-          <h1 className="text-sm md:text-base font-normal text-foreground font-playfair mb-2">
+        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-[90%] mx-auto">
+          <h1 className="text-sm md:text-base font-bold text-foreground font-playfair mb-2">
             {language === 'en' ? (
               <>
                 Jesus said in reply, "It is written One does not live by bread alone,
