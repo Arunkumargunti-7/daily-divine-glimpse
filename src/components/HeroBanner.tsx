@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface HeroBannerProps {
@@ -22,6 +21,7 @@ const HeroBanner = ({ language }: HeroBannerProps) => {
       
       {/* Grapevine Image (Right) */}
       <div className="absolute top-0 right-0 bottom-0 w-1/2 overflow-hidden">
+        {/* Uncomment the following line if you want to use the second image */}
         {/*<img
           src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80"
           alt="Grapevine symbolism"
@@ -31,10 +31,19 @@ const HeroBanner = ({ language }: HeroBannerProps) => {
       
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
-        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-4/5 mx-auto">
+        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-full md:w-4/5 mx-auto">
           <h1 className="text-xl md:text-xl font-bold text-foreground font-playfair mb-2">
-            {language === 'en' ? 'Jesus said in reply, "It is written One does not live by bread alone,but by every word that comes forth from the mouth of God." Mathew 4:4' : 'Vislumbre Divino Diario'}
+            {language === 'en' ? (
+              <>
+                Jesus said in reply, "It is written One does not live by bread alone,
+                but by every word that comes forth from the mouth of God."{" "}
+                <span className="font-normal">Mathew 4:4</span>
+              </>
+            ) : (
+              'Vislumbre Divino Diario'
+            )}
           </h1>
+          {/* Uncomment the following block if you want to include the paragraph */}
           {/*<p className="text-md md:text-lg text-muted-foreground">
             {language === 'en'
               ? 'Daily inspiration from Sacred Scripture'
