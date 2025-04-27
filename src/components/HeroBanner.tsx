@@ -31,13 +31,13 @@ const HeroBanner = ({ language }: HeroBannerProps) => {
       
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
-        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-[90%] mx-auto">
-          <h1 className="text-xl md:text-xl font-bold text-foreground font-playfair mb-2">
+        <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg w-[95%] mx-auto">
+          <h1 className="text-xl md:text-xl font-normal text-foreground font-playfair mb-2">
             {language === 'en' ? (
               <>
                 Jesus said in reply, "It is written One does not live by bread alone,
                 but by every word that comes forth from the mouth of God."{" "}
-                <span className="font-normal">Mathew 4:4</span>
+                <span className="font-bold">Mathew 4:4</span>
               </>
             ) : (
               'Vislumbre Divino Diario'
