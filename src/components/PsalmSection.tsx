@@ -6,6 +6,8 @@ interface PsalmSectionProps {
   psalms: {
     verses: string[];
     reference: string;
+   startVerse: number;
+    endVerse: number;
   };
   language: 'en' | 'es';
 }
@@ -30,7 +32,7 @@ const PsalmSection = ({ psalms, language }: PsalmSectionProps) => {
           ))}
         </div>
         <div className="text-right text-sm font-medium text-muted-foreground mt-4">
-          {psalms.reference} — Verses {psalms.startVerse}–{psalms.endVerse}
+          {psalms.reference} — {psalms.startVerse}–{psalms.endVerse}
         </div>
       </CardContent>
     </Card>
