@@ -32,8 +32,8 @@ const HeroBanner = ({ language }: HeroBannerProps) => {
       {/* Content Overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
         <div className="text-center px-4 py-6 bg-white/70 backdrop-blur-sm rounded-lg max-w-md mx-auto">
-          <h1 className="text-5xl md:text-4xl font-bold text-foreground font-playfair mb-2">
-            {language === 'en' ? 'Daily Divine Bread' : 'Vislumbre Divino Diario'}
+          <h1 className="text-2xl md:text-xl font-bold text-foreground font-playfair mb-2">
+            {language === 'en' ? 'Jesus said in reply, "It is written One does not live by bread alone,but by every word that comes forth from the mouth of God." Mathew 4:4' : 'Vislumbre Divino Diario'}
           </h1>
           {/*<p className="text-md md:text-lg text-muted-foreground">
             {language === 'en'
